@@ -1,0 +1,117 @@
+---
+layout: documentation
+title: flex-wrap
+subtitle: "Définir si les éléments retournent à la ligne si il n'y a plus de place"
+---
+
+<section class="section nowrap">
+
+    <div class="container">
+        <h1 class="section__title">flex-wrap: nowrap</h1>
+        <p class="section__subtitle">Par defaut, le wrap est en <span class="code">flex-wrap: nowrap</span>. Les
+            éléments sont donc écrasés.</p>
+
+        <div class="section__content section__content--code flex-r">
+            <div class="render flex-r">
+                <div class="square is-info">
+                    1
+                </div>
+                <div class="square is-primary">
+                    2
+                </div>
+                <div class="square is-success">
+                    3
+                </div>
+                <div class="square is-info">
+                    4
+                </div>
+                <div class="square is-primary">
+                    5
+                </div>
+                <div class="square is-success">
+                    6
+                </div>
+                <div class="square is-info">
+                    7
+                </div>
+                <div class="square is-primary">
+                    8
+                </div>
+                <div class="square is-success">
+                    9
+                </div>
+                <div class="square is-info">
+                    10
+                </div>
+                <div class="square is-primary">
+                    11
+                </div>
+                <div class="square is-success">
+                    12
+                </div>
+            </div>
+
+            <div class="code">
+                <p>display: flex;</p>
+                <i>flex-wrap: nowrap;</i>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="section wrap">
+
+    <div class="container">
+        <h1 class="section__title">flex-wrap: wrap</h1>
+        <p class="section__subtitle">Pour activer le wrap, il faut utiliser <span class="code">flex-wrap: wrap</span>.
+            Les éléments retournent à la ligne si il n'y a plus de place.</p>
+
+        <div class="section__content section__content--code flex-r">
+            <div class="render flex-r wrap">
+                <div class="square is-info">
+                    1
+                </div>
+                <div class="square is-primary">
+                    2
+                </div>
+                <div class="square is-success">
+                    3
+                </div>
+                <div class="square is-info">
+                    4
+                </div>
+                <div class="square is-primary">
+                    5
+                </div>
+                <div class="square is-success">
+                    6
+                </div>
+                <div class="square is-info">
+                    7
+                </div>
+                <div class="square is-primary">
+                    8
+                </div>
+                <div class="square is-success">
+                    9
+                </div>
+                <div class="square is-info">
+                    10
+                </div>
+                <div class="square is-primary">
+                    11
+                </div>
+                <div class="square is-success">
+                    12
+                </div>
+            </div>
+
+            <div class="code">
+                <p>display: flex;</p>
+                <p>flex-wrap: wrap;</p>
+            </div>
+        </div>
+    </div>
+
+</section>
