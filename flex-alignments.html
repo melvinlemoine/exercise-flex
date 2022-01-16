@@ -1,0 +1,144 @@
+---
+layout: documentation
+title: Alignements
+subtitle: "Définir l'alignement des éléments sur l'axe vertival et horizontal"
+---
+
+<div class="container mb-3">
+    <p>Pour travailler l'alignement en flexbox, vous pouvez <a href="https://flexboxfroggy.com/#fr"
+            target="_blank">jouer à ce jeu</a>.</p>
+</div>
+
+<section class="section justify-content">
+
+    <div class="container">
+        <h1 class="section__title">justify-content</h1>
+        <p class="section__subtitle">Le <span class="code">justify-content</span> permet un alignement sur l'axe
+            horizontal.</p>
+
+        <div class="section__content section__content--code flex-r">
+
+            <div class="controls">
+                <button class="controls__button button" id="justifyContent_button--flex-start"
+                    onclick="justifyContentProperty(this.innerHTML)">flex-start</button>
+                <button class="controls__button button" id="justifyContent_button--center"
+                    onclick="justifyContentProperty(this.innerHTML)">center</button>
+                <button class="controls__button button" id="justifyContent_button--flex-end"
+                    onclick="justifyContentProperty(this.innerHTML)">flex-end</button>
+                <button class="controls__button button" id="justifyContent_button--space-between"
+                    onclick="justifyContentProperty(this.innerHTML)">space-between</button>
+                <button class="controls__button button" id="justifyContent_button--space-around"
+                    onclick="justifyContentProperty(this.innerHTML)">space-around</button>
+            </div>
+
+            <div class="render flex-r wrap v-end" id="justifyContent_render">
+                <div class="square is-info">
+                    1
+                </div>
+                <div class="square is-primary">
+                    2
+                </div>
+                <div class="square is-success">
+                    3
+                </div>
+                <div class="square is-info">
+                    4
+                </div>
+                <div class="square is-primary">
+                    5
+                </div>
+                <div class="square is-success">
+                    6
+                </div>
+            </div>
+
+            <div class="code">
+                <p>display: flex;</p>
+                <p>justify-content: <span id="justifyContent_value">flex-start</span>;</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var justifyContent_lastProperty;
+
+        function justifyContentProperty(property) {
+            console.log("last property : " + justifyContent_lastProperty);
+
+            $('#justifyContent_value')[0].innerHTML = property;
+            $('#justifyContent_render')[0].style.justifyContent = property;
+            $('#justifyContent_button--' + justifyContent_lastProperty).removeClass('active');
+            $('#justifyContent_button--' + property).addClass('active');
+
+            justifyContent_lastProperty = property;
+        }
+        justifyContentProperty('flex-start');
+    </script>
+
+</section>
+
+<section class="section align-items">
+
+    <div class="container">
+        <h1 class="section__title">align-items</h1>
+        <p class="section__subtitle">Le <span class="code">align-items</span> permet un alignement sur l'axe vertical.
+        </p>
+
+        <div class="section__content section__content--code flex-r">
+
+            <div class="controls">
+                <button class="controls__button button" id="alignItems_button--flex-start"
+                    onclick="alignItemsProperty(this.innerHTML)">flex-start</button>
+                <button class="controls__button button" id="alignItems_button--center"
+                    onclick="alignItemsProperty(this.innerHTML)">center</button>
+                <button class="controls__button button" id="alignItems_button--flex-end"
+                    onclick="alignItemsProperty(this.innerHTML)">flex-end</button>
+                <button class="controls__button button" id="alignItems_button--stretch"
+                    onclick="alignItemsProperty(this.innerHTML)">stretch</button>
+            </div>
+
+            <div class="render flex-r wrap" id="alignItems_render">
+                <div class="square is-info">
+                    1
+                </div>
+                <div class="square is-primary">
+                    2
+                </div>
+                <div class="square is-success">
+                    3
+                </div>
+                <div class="square is-info">
+                    4
+                </div>
+                <div class="square is-primary">
+                    5
+                </div>
+                <div class="square is-success">
+                    6
+                </div>
+            </div>
+
+            <div class="code">
+                <p>display: flex;</p>
+                <p>align-items: <span id="alignItems_value">flex-start</span>;</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var alignItems_lastProperty;
+
+        function alignItemsProperty(property) {
+            console.log("last property : " + alignItems_lastProperty);
+
+            $('#alignItems_value')[0].innerHTML = property;
+            $('#alignItems_render')[0].style.alignItems = property;
+            $('#alignItems_button--' + alignItems_lastProperty).removeClass('active');
+            $('#alignItems_button--' + property).addClass('active');
+
+            alignItems_lastProperty = property;
+        }
+        alignItemsProperty('flex-start');
+    </script>
+
+</section>
