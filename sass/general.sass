@@ -1,12 +1,56 @@
-*
-    box-sizing: border-box
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap')
 
-.container
-    position: relative
-    display: block
+body
+    font-family: Poppins, sans-serif
+
+.main
+
+.section
+    margin-bottom: 3rem
+    &:last-of-type
+        margin-bottom: 0
+    &__title
+        font-weight: bold
+        font-size: 2rem
+        color: $primary
+        width: 100%
+
+    &__subtitle
+        width: 100%
+
+    &__content
+        display: flex
+        width: 100%
+        flex-wrap: wrap
+        margin-top: 1rem
+        &--code
+            display: grid
+            grid-template-columns: 69% 29%
+            column-gap: 2%
+
+span.code
+    padding: .25rem .5rem
+    border-radius: .25rem
+    color: #ED6E59
+    background-color: $light
+
+div.code
+    display: flex
+    flex-direction: column
+    padding: 1.5rem
+    border-radius: $br-normal
+    background-color: $light
+
+div.controls
+    grid-column: 1 / span 2 
     width: 100%
-    max-width: 1200px
-    margin-left: auto
-    margin-right: auto
-    padding-left: 25px
-    padding-right: 25px
+    margin-bottom: 1rem
+
+    .button
+        font-size: .85rem
+        border-radius: $br-normal
+        background-color: $light
+
+        &.active
+            background-color: $red
+            color: white
