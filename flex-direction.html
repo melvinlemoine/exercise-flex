@@ -1,0 +1,62 @@
+---
+layout: documentation
+title: flex-direction
+subtitle: "Définir la direction dans laquelle les éléments sont ordonnés : verticalement ou horizontalement"
+---
+
+<section class="section row">
+
+    <div class="container">
+        <h1 class="section__title">flex-direction: row</h1>
+        <p class="section__subtitle">Le <span class="code">display: flex</span> est par défaut en aligmement horizontal.
+            <span class="code">flex-direction: row</span> par défaut.</p>
+
+        <div class="section__content section__content--code flex-r">
+            <div class="render flex-r">
+                <div class="square is-info">
+                    1
+                </div>
+                <div class="square is-primary">
+                    2
+                </div>
+                <div class="square is-success">
+                    3
+                </div>
+            </div>
+
+            <div class="code">
+                <p>display: flex;</p>
+                <i>flex-direction: row;</i>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="section column">
+
+    <div class="container">
+        <h1 class="section__title">flex-direction: colmun</h1>
+        <p class="section__subtitle">Le <span class="code">flex-direction: column</span> permet de passer l'alignement à
+            la vertical.</p>
+
+        <div class="section__content section__content--code">
+            <div class="render flex-c">
+                <div class="square is-info">
+                    1
+                </div>
+                <div class="square is-primary">
+                    2
+                </div>
+                <div class="square is-success">
+                    3
+                </div>
+            </div>
+            <div class="code">
+                <p>display: flex;</p>
+                <p>flex-direction: column;</p>
+            </div>
+        </div>
+    </div>
+
+</section>
