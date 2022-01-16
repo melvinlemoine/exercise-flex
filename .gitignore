@@ -6,6 +6,4 @@ vendor
 node_modules
 assets/css/styles.css
 assets/css/styles.css.map
-Gemfile.lock
-Gemfile
 package-lock.json
