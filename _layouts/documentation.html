@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation - {{page.title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/ploume.min.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body class="body exercice">
+
+    <header class="header flex-c pv-3-xs">
+
+        <div class="container">
+            <h1 class="header__title bold is-1-xs">{{page.title}}</h1>
+            <p class="header__subtitle is-5-xs">{{page.subtitle}}</p>
+
+
+            {% assign current_url = site.url | append: page.url | remove: '.html' %}
+
+            <!-- <p>current_url : {{current_url}}</p>
+            <p>current_page_url : {{current_page_url}}</p> -->
+
+            <ul class="header__pages flex-r w-full mt-1-xs">
+                {% for page in site.data.documentation %}
+
+                {% assign current_page_url = site.url | append: '/' | append: page.link | remove: '.html' %}
+                <li class="header__pages_li {% if current_url == current_page_url %}active{% endif %}">
+                    <a class="header__pages_li_a" href="{{current_page_url}}">
+                        {{ page.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </header>
+
+    <main class="main">
+        {{content}}
+    </main>
+
+</body>
+
+</html>
