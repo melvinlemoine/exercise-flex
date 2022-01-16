@@ -1,0 +1,79 @@
+---
+layout: documentation
+title: Grid
+subtitle: "Structurer ses éléments dans une grille."
+---
+
+<section class="section grid">
+
+    <div class="container">
+        <h1 class="section__title">Créer une grille</h1>
+        <p class="section__subtitle"><span class="code">display: grid</span> permet de définir l'affichage en grille sur
+            l'élément concerné.</p>
+        <p class="section__subtitle"><span class="code">grid-template-columns</span> permet de définir le nombre de
+            colonnes et leur taille.</p>
+        <p class="section__subtitle"><span class="code">grid-template-rows</span> permet de définir le nombre de lignes
+            et leur taille.</p>
+        <p class="section__subtitle"><span class="code">column-gap</span> permet de définir l'espace entre chaque
+            colonne.</p>
+        <p class="section__subtitle"><span class="code">row-gap</span> permet de définir l'espace entre chaque ligne.
+        </p>
+
+        <div class="section__content section__content--code flex-r">
+
+            <div class="controls">
+                <button class="controls__button button" id="grid_button--1"
+                    onclick="gridProperty(this.innerHTML)">1</button>
+                <button class="controls__button button" id="grid_button--3"
+                    onclick="gridProperty(this.innerHTML)">3</button>
+                <button class="controls__button button" id="grid_button--6"
+                    onclick="gridProperty(this.innerHTML)">6</button>
+            </div>
+
+            <div class="render flex-r wrap v-end" id="grid_render">
+                <div class="square is-info">
+                    1
+                </div>
+                <div class="square is-primary">
+                    2
+                </div>
+                <div class="square is-success">
+                    3
+                </div>
+                <div class="square is-link">
+                    4
+                </div>
+                <div class="square is-caution">
+                    5
+                </div>
+                <div class="square is-danger">
+                    6
+                </div>
+            </div>
+
+            <div class="code">
+                <p>display: grid;</p>
+                <p>grid-template-columns: <span id="grid_value">repeat(6, 1fr)</span>;</p>
+                <p>column-gap: 1rem;</p>
+                <p>row-gap: 1rem;</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var grid_lastProperty;
+
+        function gridProperty(property) {
+            console.log("last property : " + grid_lastProperty);
+
+            $('#grid_value')[0].innerHTML = "repeat(" + property + ", 1fr)";
+            $('#grid_render')[0].style.gridTemplateColumns = "repeat(" + property + ", 1fr)";
+            $('#grid_button--' + grid_lastProperty).removeClass('active');
+            $('#grid_button--' + property).addClass('active');
+
+            grid_lastProperty = property;
+        }
+        gridProperty(3);
+    </script>
+
+</section>
