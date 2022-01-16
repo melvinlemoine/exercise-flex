@@ -1,3 +1,11 @@
-node_modules/
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+node_modules
+assets/css/styles.css
+assets/css/styles.css.map
+Gemfile.lock
+Gemfile
 package-lock.json
-dist/
