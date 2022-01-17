@@ -1,34 +1,35 @@
-.body.exercice
-    .header
-        background-color: $primary
-        color: white
+.header
+    background-color: $primary
+    color: white
 
-        &__pages
-            &_li
-                display: flex
-                &.active
-                    background-color: $secondary
-                &:hover
-                    background-color: $secondary
-                &_a
-                    padding: .5rem .75rem
-                    color: white
-
-    .main
-        margin-top: 3rem
-
-    .render
-        padding: 1rem
-        border: 2px solid $light
-        border-radius: $br-normal
-        .square
-            width: 5rem
-            height: 5rem
-            // border: 1px solid black
-            border-radius: $br-normal
-            // background-color: 
+    &__pages
+        &_li
             display: flex
-            justify-content: center
-            align-items: center
-            font-size: 1.5rem
-            font-weight: bold
+            &.active
+                background-color: $secondary
+            &:hover
+                background-color: $secondary
+            &_a
+                padding: .5rem .75rem
+                color: white
+
+.main
+    margin-top: 3rem
+
+.render
+    width: 100%
+    padding: 1rem
+    border: 2px solid $light
+    border-radius: $br-normal
+    .square
+        width: 5rem
+        height: 5rem
+        text-align: center
+            // border: 1px solid black
+        border-radius: $br-normal
+            // background-color: 
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 1.5rem
+        font-weight: bold
