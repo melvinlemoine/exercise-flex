@@ -1,0 +1,51 @@
+---
+layout: documentation
+title: Absolute & relative
+subtitle: "Gérer le position en absolute par rapport à un élément en relative."
+class: absolute-relative
+---
+
+<section class="section">
+
+    <div class="container">
+
+        <h1 class="section__title">Positionnement</h1>
+        <p class="section__subtitle">Des éléments en <span class="code">position: absolute</span> se placent par rapport
+            à leur parent le plus proche qui est en <span class="code">position: relative</span>.</p>
+
+        <div class="section__content section__content--code">
+
+            <div class="render">
+                <div class="square square--relative is-info">
+                    relative
+                    <div class="square square--absolute square--absolute--1 is-danger">
+                        absolute 1
+                    </div>
+                    <div class="square square--absolute square--absolute--2 is-caution">
+                        absolute 2
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="code">
+                <p><span class="selector">.relative</span>{</p>
+                <p><span class="property">&emsp;position:</span> <span class="property-value">relative</span>;</p>
+                <p>}</p>
+                <p><span class="selector">.absolute1</span>{</p>
+                <p><span class="property">&emsp;position:</span> <span class="property-value">absolute</span>;</p>
+                <p><span class="property">&emsp;top:</span> <span class="property-value">5rem</span>;</p>
+                <p><span class="property">&emsp;left:</span> <span class="property-value">110%</span>;</p>
+                <p>}</p>
+                <p><span class="selector">.absolute2</span>{</p>
+                <p><span class="property">&emsp;position:</span> <span class="property-value">absolute</span>;</p>
+                <p><span class="property">&emsp;top:</span> <span class="property-value">110%</span>;</p>
+                <p><span class="property">&emsp;left:</span> <span class="property-value">3rem</span>;</p>
+                <p>}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

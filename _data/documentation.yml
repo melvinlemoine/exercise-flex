@@ -9,3 +9,10 @@
 
 - title: Grid
   link: flex-grid
+
+- title: Absolute & relative
+  link: absolute-relative
+
+- title: L'exercice sympa
+  link: exercice-sympa
+  class: ml-auto
